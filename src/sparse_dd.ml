@@ -1,6 +1,8 @@
 (* Utility program which copies between two block devices, using vhd BATs and efficient zero-scanning
    for performance. *)
 
+Printexc.record_backtrace true;
+
 module D = Debug.Make(struct let name = "sparse_dd" end)
 open D
 
